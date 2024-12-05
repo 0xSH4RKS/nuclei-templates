@@ -3,7 +3,7 @@ id: azure-storage-sas-leak
 info:
   name: Azure Storage Shared Access Signature (SAS) Leak
   author: 0xSH4RKS
-  severity: critical
+  severity: high
   description: |
     Detects exposed Azure Storage Shared Access Signatures (SAS) in connection strings and URLs within HTTP responses.
     SAS tokens grant access to Azure Storage resources and should be kept confidential.
