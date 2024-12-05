@@ -9,7 +9,7 @@ info:
     SAS tokens grant access to Azure Storage resources and should be kept confidential.
   tags: azure, storage, sas, credential-exposure
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}"
@@ -62,7 +62,7 @@ requests:
           - '(?i)https?://[a-zA-Z0-9.\-]+\.blob\.core\.windows\.net/[a-zA-Z0-9\-]+/[a-zA-Z0-9\-]+\.txt\?sv=\d{4}-\d{2}-\d{2}.*sig=[\w%]+.*sp=[rwlmad]+'
           - '(?i)https?://[a-zA-Z0-9.\-]+\.blob\.core\.windows\.net/[a-zA-Z0-9\-]+/[a-zA-Z0-9\-]+\.txt\?sv=\d{4}-\d{2}-\d{2}.*sig=[\w%]+.*sp=[rwlmad]+'
 
-      # General word matcher as an additional check
+      # General word matchers to ensure the presence of key parameters
       - type: word
         words:
           - "sv="
